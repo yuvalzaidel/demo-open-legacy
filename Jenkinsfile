@@ -7,7 +7,7 @@ pipeline {
                     sh 'git clone https://github.com/yuvalzaidel/demo-open-legacy.git'
                     sh 'cd demo-open-legacy/ && mvn clean install' 
 
-                    sh 'docker build -t demo -f demo-open-legacy/Dockerfile .'
+                    sh 'cd demo-open-legacy/ && docker build -t demo -f Dockerfile .'
             }
         }
     }
