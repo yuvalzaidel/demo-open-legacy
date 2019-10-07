@@ -8,7 +8,7 @@ pipeline {
                     sh 'cd demo-open-legacy/ && mvn clean install' 
                     sh 'cd demo-open-legacy/ && mvn clean package > ./target/demo-0.0.1-SNAPSHOT.jar'
                     sh 'cd demo-open-legacy/ && docker build -t demo -f Dockerfile .'
-                    sh 'cd demo-open-legacy/ && docker run -d -p 3333:8080 demo
+                    sh 'cd demo-open-legacy/ && docker run -d -p 3333:8080 demo'
             }
         }
     }
